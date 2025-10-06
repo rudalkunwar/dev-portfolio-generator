@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Icon } from "@/components/icons";
 
 export default function Home() {
   return (
@@ -36,17 +37,24 @@ export default function Home() {
           </div>
           <div className="mt-16 grid w-full grid-cols-2 md:grid-cols-4 gap-6 text-sm text-foreground/60">
             {[
-              ["Next.js 15", "App Router"],
-              ["React 19", "Server Components"],
-              ["Tailwind v4", "Design tokens"],
-              ["SEO Ready", "Meta + OG"],
-            ].map(([title, subtitle]) => (
+              { title: "Next.js 15", subtitle: "App Router", icon: "globe" },
+              { title: "React 19", subtitle: "RSC + 19 APIs", icon: "cpu" },
+              { title: "Tailwind v4", subtitle: "Design tokens", icon: "palette" },
+              { title: "SEO Ready", subtitle: "Meta + OG", icon: "sparkle" },
+            ].map((item) => (
               <div
-                key={title}
-                className="flex flex-col items-center gap-1 rounded-md border border-foreground/10 bg-background/40 px-3 py-4"
+                key={item.title}
+                className="flex flex-col items-center gap-2 rounded-md border border-foreground/10 bg-background/40 px-4 py-5 hover:border-foreground/20 transition-colors"
               >
-                <span className="font-medium text-foreground/80">{title}</span>
-                <span className="text-[11px] uppercase tracking-wide">{subtitle}</span>
+                <div className="rounded-md p-2 bg-foreground/5 text-foreground/70">
+                  <Icon name={item.icon as any} size={22} />
+                </div>
+                <span className="font-medium text-foreground/80 text-sm">
+                  {item.title}
+                </span>
+                <span className="text-[10px] uppercase tracking-wide">
+                  {item.subtitle}
+                </span>
               </div>
             ))}
           </div>
@@ -66,37 +74,46 @@ export default function Home() {
                   title: "Project Showcase",
                   body:
                     "Display projects with images, tech stack badges, links, and optional GitHub stars integration.",
+                  icon: "grid",
                 },
                 {
                   title: "Content System",
                   body:
                     "Write blog posts & bios in Markdown/MDX (planned) with automatic routing and syntax highlighting.",
+                  icon: "fileText",
                 },
                 {
                   title: "Theming",
                   body:
                     "Switch or extend themes with a token-based design layer. Dark mode included by default.",
+                  icon: "palette",
                 },
                 {
                   title: "SEO & Social",
                   body:
                     "Preconfigured metadata, Open Graph tags, sitemap (planned) and sensible defaults.",
+                  icon: "globe",
                 },
                 {
                   title: "Performance",
                   body:
                     "Image optimization, font loading strategy, and route-level code splitting out of the box.",
+                  icon: "lightning",
                 },
                 {
                   title: "Extensible",
                   body:
                     "Add sections: timeline, skills, testimonials, contact form (API route) with minimal friction.",
+                  icon: "puzzle",
                 },
               ].map((f) => (
                 <div
                   key={f.title}
-                  className="group relative rounded-lg border border-foreground/10 bg-background/60 p-6 backdrop-blur shadow-sm hover:shadow transition-shadow"
+                  className="group relative rounded-lg border border-foreground/10 bg-background/60 p-6 backdrop-blur shadow-sm hover:shadow-lg transition-all hover:translate-y-[-2px]"
                 >
+                  <div className="mb-4 inline-flex items-center justify-center rounded-md bg-foreground/5 p-2 text-foreground/70 group-hover:text-foreground group-hover:bg-foreground/10 transition-colors">
+                    <Icon name={f.icon as any} size={22} />
+                  </div>
                   <h3 className="font-semibold mb-2 text-foreground/90">
                     {f.title}
                   </h3>
