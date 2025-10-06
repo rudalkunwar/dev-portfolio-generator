@@ -12,7 +12,7 @@ export default function Home() {
             <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
             Launch your portfolio in minutes
           </div>
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight bg-clip-text text-transparent bg-[linear-gradient(90deg,theme(colors.foreground),theme(colors.foreground)/60)]">
+          <h1 className="text-white text-4xl md:text-6xl font-semibold tracking-tight bg-clip-text bg-[linear-gradient(90deg,theme(colors.foreground),theme(colors.foreground)/60)]">
             Dev Portfolio Generator
           </h1>
           <p className="mt-6 max-w-2xl text-base md:text-lg text-foreground/70 leading-relaxed">
@@ -26,7 +26,7 @@ export default function Home() {
               Get Started
             </Link>
             <a
-              href="https://github.com/"
+              href="https://github.com/rudalkunwar/dev-portfolio-generator"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-md border border-foreground/20 bg-background/60 backdrop-blur px-6 py-3 text-sm md:text-base font-medium hover:bg-foreground/5 transition-colors"
