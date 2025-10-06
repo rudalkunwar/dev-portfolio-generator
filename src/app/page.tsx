@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import { Icon } from "@/components/icons";
+import { Icon, IconKey } from "@/components/icons";
 
 export default function Home() {
   return (
@@ -47,7 +46,7 @@ export default function Home() {
                 className="flex flex-col items-center gap-2 rounded-md border border-foreground/10 bg-background/40 px-4 py-5 hover:border-foreground/20 transition-colors"
               >
                 <div className="rounded-md p-2 bg-foreground/5 text-foreground/70">
-                  <Icon name={item.icon as any} size={22} />
+                  <Icon name={item.icon as IconKey} size={22} />
                 </div>
                 <span className="font-medium text-foreground/80 text-sm">
                   {item.title}
@@ -112,7 +111,7 @@ export default function Home() {
                   className="group relative rounded-lg border border-foreground/10 bg-background/60 p-6 backdrop-blur shadow-sm hover:shadow-lg transition-all hover:translate-y-[-2px]"
                 >
                   <div className="mb-4 inline-flex items-center justify-center rounded-md bg-foreground/5 p-2 text-foreground/70 group-hover:text-foreground group-hover:bg-foreground/10 transition-colors">
-                    <Icon name={f.icon as any} size={22} />
+                    <Icon name={f.icon as IconKey} size={22} />
                   </div>
                   <h3 className="font-semibold mb-2 text-foreground/90">
                     {f.title}
