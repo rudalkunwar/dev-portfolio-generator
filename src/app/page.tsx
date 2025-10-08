@@ -163,12 +163,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <footer className="py-10 text-center text-xs text-foreground/50 border-t border-foreground/10 mt-auto">
-        <p>
-          Built with Next.js, React, and Tailwind. Customize freely. MIT Licensed.
-        </p>
-      </footer>
     </div>
   );
 }
