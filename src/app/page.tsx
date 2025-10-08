@@ -7,7 +7,7 @@ export default function Home() {
       {/* Hero */}
       <header className="relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none [mask-image:radial-gradient(circle_at_center,black,transparent)] bg-[repeating-linear-gradient(45deg,theme(colors.foreground/5)_0_8px,transparent_8px_16px)]" />
-        <div className="relative mx-auto max-w-5xl px-6 pt-24 pb-16 md:pt-32 md:pb-28 text-center flex flex-col items-center">
+        <div className="relative mx-auto max-w-5xl px-6 pt-24 pb-16 md:pt-8 md:pb-24 text-center flex flex-col items-center">
           <div className="flex items-center gap-2 mb-6 rounded-full border border-foreground/10 bg-foreground/5 px-4 py-1 text-xs text-foreground/70 backdrop-blur-sm">
             <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
             Launch your portfolio in minutes
@@ -163,12 +163,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <footer className="py-10 text-center text-xs text-foreground/50 border-t border-foreground/10 mt-auto">
-        <p>
-          Built with Next.js, React, and Tailwind. Customize freely. MIT Licensed.
-        </p>
-      </footer>
     </div>
   );
 }
