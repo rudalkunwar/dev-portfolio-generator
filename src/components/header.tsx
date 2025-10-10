@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Icon } from "@/components/icons";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,7 +51,10 @@ export default function Header() {
                     </Link>
                 </nav>
 
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="hidden md:block">
+                        <ThemeToggle />
+                    </div>
                     {/* GitHub Button - Hidden on mobile */}
                     <a
                         href="https://github.com/rudalkunwar/dev-portfolio-generator"
@@ -99,6 +103,9 @@ export default function Header() {
                 <div className="md:hidden border-t border-foreground/10 bg-background/95 backdrop-blur">
                     <div className="container mx-auto px-6 py-4">
                         <nav className="flex flex-col space-y-4">
+                            <div className="flex justify-end">
+                                <ThemeToggle />
+                            </div>
                             <Link
                                 href="/"
                                 className="transition-colors hover:text-foreground/80 text-foreground/60 text-sm font-medium"
