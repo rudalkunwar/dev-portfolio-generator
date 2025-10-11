@@ -12,7 +12,7 @@ export default function Home() {
             <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
             Launch your portfolio in minutes
           </div>
-          <h1 className="text-white text-4xl md:text-6xl font-semibold tracking-tight bg-clip-text bg-[linear-gradient(90deg,theme(colors.foreground),theme(colors.foreground)/60)]">
+          <h1 className="text-foreground text-4xl md:text-6xl font-semibold tracking-tight bg-clip-text bg-[linear-gradient(90deg,theme(colors.foreground),theme(colors.foreground)/60)]">
             Dev Portfolio Generator
           </h1>
           <p className="mt-6 max-w-2xl text-base md:text-lg text-foreground/70 leading-relaxed">
@@ -127,7 +127,7 @@ export default function Home() {
         </section>
 
         {/* CTA */}
-        <section id="get-started" className="py-24 bg-foreground/5 relative">
+        <section id="get-started" className="py-24 bg-background relative">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,theme(colors.foreground/10),transparent_70%)]" />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
@@ -152,7 +152,7 @@ export default function Home() {
                 Open Starter
               </Link>
               <a
-                href="https://github.com/"
+                href="https://github.com/rudalkunwar/dev-portfolio-generator"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-md border border-foreground/20 bg-background/70 px-6 py-3 text-sm font-medium hover:bg-background/90"

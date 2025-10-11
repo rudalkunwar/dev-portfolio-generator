@@ -1,5 +1,35 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## GitHub-powered Portfolio APIs
+
+The project exposes a set of server-side API routes that wrap the GitHub REST API via [`@octokit/rest`](https://github.com/octokit/octokit.js). These endpoints are designed to supply everything a developer portfolio needs in one place:
+
+- `GET /api/github/profile` &mdash; basic profile meta (name, bio, followers, counts)
+- `GET /api/github/repositories` &mdash; curated repository lists with stats and topics
+- `GET /api/github/stats` &mdash; aggregate stars, forks, language usage, top repos
+- `GET /api/github/activity` &mdash; recent public events (pushes, PRs, releases, etc.)
+- `GET /api/github/overview` &mdash; convenience endpoint returning the combined payload above
+
+### Configuration
+
+Create a `.env` file with the following entries:
+
+```
+GITHUB_USERNAME=your-github-handle
+# Optional but recommended to increase rate limits and load private repos
+GITHUB_TOKEN=ghp_your_personal_access_token
+```
+
+All endpoints accept a `username` query parameter to override the default handle derived from `GITHUB_USERNAME`.
+
+### Example Requests
+
+- `GET /api/github/repositories?limit=6&includeForks=false`
+- `GET /api/github/stats?username=vercel`
+- `GET /api/github/overview?activityLimit=10&repositoriesLimit=8`
+
+Responses are JSON documents ready for consumption in React Server Components or client-side hooks.
+
 ## Getting Started
 
 First, run the development server:
