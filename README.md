@@ -1,34 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dev Portfolio Generator
 
-## GitHub-powered Portfolio APIs
+Dev Portfolio Generator is a Next.js application that generates developer portfolios using data fetched from GitHub. It provides a modern, customizable interface to showcase your GitHub profile, repositories, activity, and stats.
 
-The project exposes a set of server-side API routes that wrap the GitHub REST API via [`@octokit/rest`](https://github.com/octokit/octokit.js). These endpoints are designed to supply everything a developer portfolio needs in one place:
+## Features
 
-- `GET /api/github/profile` &mdash; basic profile meta (name, bio, followers, counts)
-- `GET /api/github/repositories` &mdash; curated repository lists with stats and topics
-- `GET /api/github/stats` &mdash; aggregate stars, forks, language usage, top repos
-- `GET /api/github/activity` &mdash; recent public events (pushes, PRs, releases, etc.)
-- `GET /api/github/overview` &mdash; convenience endpoint returning the combined payload above
-
-### Configuration
-
-Create a `.env` file with the following entries:
-
-```
-GITHUB_USERNAME=your-github-handle
-# Optional but recommended to increase rate limits and load private repos
-GITHUB_TOKEN=ghp_your_personal_access_token
-```
-
-All endpoints accept a `username` query parameter to override the default handle derived from `GITHUB_USERNAME`.
-
-### Example Requests
-
-- `GET /api/github/repositories?limit=6&includeForks=false`
-- `GET /api/github/stats?username=vercel`
-- `GET /api/github/overview?activityLimit=10&repositoriesLimit=8`
-
-Responses are JSON documents ready for consumption in React Server Components or client-side hooks.
+- Fetches GitHub profile, repositories, activity, and stats via API routes
+- Modern UI with theme support
+- Easy to customize and extend
+- Built with Next.js, TypeScript, and Tailwind CSS
 
 ## Getting Started
 
@@ -50,17 +29,24 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  app/
+    api/github/...
+    components/
+    lib/github/...
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `app/api/github/`: API routes for fetching GitHub data
+- `app/components/`: UI components (header, footer, theme toggle, etc.)
+- `lib/github/`: GitHub client, service, and types
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Customization
 
-## Deploy on Vercel
+You can modify components in `src/app/components/` and API logic in `src/app/api/github/` to fit your needs.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
