@@ -11,7 +11,7 @@ export default function Footer() {
                     {/* Brand Section */}
                     <div className="md:col-span-2">
                         <div className="flex items-center gap-2 mb-4">
-                            <Icon name="rocket" size={24} className="text-foreground" />
+                            {/* <Icon name="rocket" size={24} className="text-foreground" /> */}
                             <span className="font-semibold text-lg">Dev Portfolio Generator</span>
                         </div>
                         <p className="text-sm text-foreground/70 leading-relaxed max-w-md">
