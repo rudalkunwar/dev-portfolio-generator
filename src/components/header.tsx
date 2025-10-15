@@ -12,7 +12,7 @@ export default function Header() {
             <div className="container mx-auto flex h-16 max-w-screen-xl items-center justify-between px-6">
                 <div className="flex items-center">
                     <Link href="/" className="flex items-center space-x-2">
-                        <Icon name="rocket" size={24} className="text-foreground" />
+                        {/* <Icon name="rocket" size={24} className="text-foreground" /> */}
                         <span className="font-bold text-lg">Dev Portfolio</span>
                     </Link>
                 </div>
